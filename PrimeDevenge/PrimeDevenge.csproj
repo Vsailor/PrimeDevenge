@@ -190,6 +190,7 @@
     <Content Include="img\glyphicons-halflings.png" />
     <Content Include="img\header.jpg" />
     <Content Include="img\khrystyna.png" />
+    <Content Include="img\mobiledev.png" />
     <Content Include="img\portfolio\1.jpg" />
     <Content Include="img\portfolio\2.jpg" />
     <Content Include="img\portfolio\3.jpg" />
@@ -198,6 +199,8 @@
     <Content Include="img\portfolio\6.jpg" />
     <Content Include="img\PrimeDevenge.png" />
     <Content Include="img\Vsailor.jpg" />
+    <Content Include="img\WebsiteDev.png" />
+    <Content Include="img\WinDev.png" />
     <Content Include="img\world-512.png" />
     <Content Include="img\_2505699.png" />
     <Content Include="Scripts\bootstrap.js" />
