@@ -188,6 +188,7 @@
     <Content Include="img\datrax.png" />
     <Content Include="img\glyphicons-halflings-white.png" />
     <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\Gmail-icon.png" />
     <Content Include="img\header.jpg" />
     <Content Include="img\khrystyna.png" />
     <Content Include="img\mobiledev.png" />
@@ -198,6 +199,7 @@
     <Content Include="img\portfolio\5.jpg" />
     <Content Include="img\portfolio\6.jpg" />
     <Content Include="img\PrimeDevenge.png" />
+    <Content Include="img\Skype-icon.png" />
     <Content Include="img\Vsailor.jpg" />
     <Content Include="img\WebsiteDev.png" />
     <Content Include="img\WinDev.png" />
