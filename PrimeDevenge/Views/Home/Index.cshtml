@@ -26,6 +26,46 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+	//select all the a tag with name equal to modal
+	$('a[name=modal]').click(function(e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		//Get the A tag
+		var id = $(this).attr('href');
+		//Get the screen height and width
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+		//Set heigth and width to mask to fill up the whole screen
+		$('#mask').css({'width':maskWidth,'height':maskHeight});
+		//transition effect
+		$('#mask').fadeIn(1000);
+		$('#mask').fadeTo("slow",0.8);
+		//Get the window height and width
+		var winH = $(window).height();
+		var winW = $(window).width();
+		//Set the popup window to center
+		$(id).css('top',  winH/2-$(id).height()/2);
+		$(id).css('left', winW/2-$(id).width()/2);
+		//transition effect
+		$(id).fadeIn(2000);
+	});
+	//if close button is clicked
+	$('.window .close').click(function (e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		$('#mask, .window').hide();
+	});
+	//if mask is clicked
+	$('#mask').click(function () {
+		$(this).hide();
+		$('.window').hide();
+	});
+});
+    </script>
 </head>
 <body id="page-top">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
@@ -67,34 +107,20 @@
                 @*<h1>Your Favorite Source of Free Bootstrap Themes</h1>*@
                 <img src="~/img/PrimeDevenge.png" width="70%" height="70%" />
                 <p>
-                    <table align="center">
+                    <table align="center" width="40%">
                         <tr>
-                            <td align="left" valign="top">
-                                <ul>
+                            <td width="25%">
+                                <img src="~/img/android_logo.png" width="50%" />
+                            </td>
 
-                                    <li>
-                                        <h4>Mobile</h4>
-                                    </li>
-                                </ul>
+                            <td width="25%">
+                                <img src="~/img/_2505699.png" width="61%" />
                             </td>
-                            <td align="left" valign="top">
-                                <ul>
-                                    <li>
-                                        <h4>Desktop</h4>
-                                    </li>
-                                </ul>
+                            <td width="25%">
+                                <img src="~/img/world-512.png" width="60%" />
                             </td>
-                            <td align="left" valign="top">
-                                <ul>
-                                    <li>
-                                        <h4>Web-site</h4>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">
-                                <h4>development</h4>
+                            <td width="25%">
+                                <img src="~/img/apple-logo.png" width="50%" />
                             </td>
                         </tr>
                     </table>
@@ -113,45 +139,19 @@
                     <hr class="light">
                     <p class="text-faded">
                         Наша комманда состоит из молодых перспективных сертифицированых специалистов, готовых создавать новые программные продукты и
-                        поддерживать их.
-                        <table align="center">
-                            <tr>
-                                <td valign="top" align="left">
-                                    Наши цели:
-                                    <ul>
-                                        <li>Создавать софт высокого качества в установленые сроки</li>
-                                        <li>Индивидуальный подход к каждому клиенту</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <td valign="top">
-                                    <img src="~/img/portfolio/1.jpg" width="40%" />
-                                </td>
-                                <td valign="top">
-                                    123
-                                </td>
-                            </tr>
-                            <tr>
-                                <td valign="top">
-                                    123
-                                </td>
-                                <td valign="top">
-                                    <img src="~/img/portfolio/1.jpg" width="40%" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td valign="top">
-                                    <img src="~/img/portfolio/1.jpg" width="40%" />
-                                </td>
-                                <td valign="top">
-                                    123
-                                </td>
-                            </tr>
-                        </table>
-
+                        поддерживать их. Мы максимально ответственно подходим к каждой задаче и ставим качество превыше всего. Комманда Prime Devenge
+                        постоянно развивается, изучает новые технологии для достижения лучшего результата. Каждый из нас владеет пространственным мышлением и хорошо знает математику. Это помогает находить и выбирать лучшее решение из всех возможных.
+                        <div id="wrap">
+                            <div id="content" class="clearfix">
+                                <span class="link"> <a href="#dialog" name="modal"><img src="~/img/Vsailor.jpg" width="30%"/></a> </span>
+                                <div id="boxes">
+                                    <div id="dialog" class="window">
+                                        <img src="~/img/Vsailor.jpg"/>
+                                    </div>
+                                    <div id="mask"></div>
+                                </div>
+                            </div>
+                        </div>
                     </p>
                     <a href="#" class="btn btn-default btn-xl">Get Started!</a>
                 </div>

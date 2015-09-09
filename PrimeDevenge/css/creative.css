@@ -475,3 +475,73 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
+/*sasdfasfasfasf*/
+
+
+
+
+ .window a {
+            color: #333;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        a:hover {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        #mask {
+            position: fixed;
+            left: 0px;
+            top: 0;
+            right: 100%;
+            bottom: 0px;
+            z-index: 9000;
+            background-color: #000;
+            display: none;
+            font-family: Georgia;
+        }
+
+        #boxes .window {
+            position: fixed;
+            height: 10%:
+            display: none;
+            z-index: 9999;
+            padding: 20px;
+            text-align: center;
+            font-size: 2px;
+        }
+
+        #boxes #dialog {
+                        position: fixed;
+            height: 10%:
+            display: none;
+            z-index: 9999;
+            padding: 20px;
+            text-align: center;
+            font-size: 2px;
+        }
+
+        .close {
+            top: 0px;
+            right:0px;
+            padding-right: 200px;
+            
+            /*margin: 142px 10px 0 0;*/
+        }
+
+        .link a {
+            margin-top: 0px;
+            width: 100%;
+            text-align: center;
+            display: block;
+            font-size: 25px;
+            font-family: Georgia;
+            color: #212121;
+        }
+
+            .link a:hover {
+                color: #767676;
+            }
